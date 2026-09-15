@@ -14,6 +14,7 @@
         background-attachment: fixed;
         font-family: "Fredoka", sans-serif;
         position: relative;
+        z-index: 0;
       }
 
       body::before {
@@ -23,7 +24,12 @@
         background: url("./images/BackgroundImage/BackgroundImage.png") center / cover;
         opacity: 0.08;
         pointer-events: none;
-        z-index: -1;
+        z-index: 0;
+      }
+
+      body > * {
+        position: relative;
+        z-index: 1;
       }
 
       .H5Titles, .H1Titles, .H3Titles, .PTitles {
