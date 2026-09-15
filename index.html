@@ -1,143 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <section>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Scrufflx Portfolio</title>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-      body {
-        padding-left: 10px;
-        min-height: 150vh;
-        margin: 0;
-        background: linear-gradient(180deg, #a72222, #111010);
-        background-attachment: fixed;
-        font-family: "Fredoka", sans-serif;
-        position: relative;
-        z-index: 0;
-      }
+  <title>Scrufflx Portfolio</title>
 
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: url("./images/BackgroundImage/BackgroundImage.png") center / cover;
-        opacity: 0.08;
-        pointer-events: none;
-        z-index: 0;
-      }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
 
-      body > * {
-        position: relative;
-        z-index: 1;
-      }
+  <style>
+    body {
+      padding-left: 10px;
+      min-height: 150vh;
+      margin: 0;
+      background: linear-gradient(180deg, #a72222, #111010);
+      background-attachment: fixed;
+      font-family: "Fredoka", sans-serif;
+      position: relative;
+      z-index: 0;
+    }
 
-      .H5Titles, .H1Titles, .H3Titles, .PTitles {
-        color: white;
-        font-weight: 700;
-        text-shadow: 1px 1px 0 black;
-      }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("./images/BackgroundImage/BackgroundImage.png") center / cover;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-      .H1Titles {
-        font-size: 2em;
-        text-shadow: 2px 2px 0 black;
-        text-decoration: underline;
-        text-decoration-color: white;
-        text-underline-offset: 8px;
-      }
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
 
+    .H5Titles,
+    .H1Titles,
+    .H3Titles,
+    .PTitles {
+      color: white;
+      font-weight: 700;
+      text-shadow: 1px 1px 0 black;
+    }
+
+    .H1Titles {
+      font-size: 2em;
+      text-shadow: 2px 2px 0 black;
+      text-decoration: underline;
+      text-decoration-color: white;
+      text-underline-offset: 8px;
+    }
+
+    .artwork {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      box-shadow: 0 0 15px #070707;
+      border-radius: 20px;
+      padding: 5px;
+      background: #a8a2a2;
+    }
+
+    @media (max-width: 750px) {
       .artwork {
-        width: 240px;
-        height: 240px;
-        object-fit: cover;
-        box-shadow: 0 0 15px #070707;
-        border-radius: 20px;
-        padding: 5px;
-        background: #a8a2a2;
-      }
-      
-      @media (max-width: 750px) {
-        .artwork {
         width: 150px;
         height: 150px;
-      }}
-
-      .Footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 7px 0;
-        background: rgba(15, 15, 15, 0.85);
-        border-top: 2px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
-        text-align: center;
       }
-      .Footer h5 {
-        margin: 3px 0;
-      }
+    }
 
-      .ContactInfo {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        list-style-type: none;
-        padding: 0;
-        margin: 3px 0 0;
-        color: white;
-        font-size: 12px;
-        font-weight: 700;
-        text-shadow: 1px 1px 0 black;
-      } 
-    </style>
-  </head>
+    .Footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+      background: rgba(15, 15, 15, 0.85);
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
 
-  <body>
+    .Footer.Hidden {
+      transform: translateY(100%);
+      opacity: 0;
+    }
 
-    <section>
-      <h1 class="H1Titles">Scrufflx Portfolio!</h1>
-      <p class="PTitles">Most Of My Art Work Will Be Listed Here!</p>
-    </section>
+    .Footer h5 {
+      margin: 3px 0;
+    }
 
-    <section>
-      <h3 class="H3Titles">Profile Pictures:</h3>
+    .ContactInfo {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      list-style-type: none;
+      padding: 0;
+      margin: 3px 0 0;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      text-shadow: 1px 1px 0 black;
+    }
 
-      <div>
-        <img class="artwork" src="./images/ProfilePictures/ProfilePicture1.png" alt="Profile picture artwork 1">
-        <img class="artwork" src="./images/ProfilePictures/ProfilePicture2.png" alt="Profile picture artwork 2">
-        <img class="artwork" src="./images/ProfilePictures/ProfilePicture3.png" alt="Profile picture artwork 3">
-        <img class="artwork" src="./images/ProfilePictures/ProfilePicture4.png" alt="Profile picture artwork 4">
-      </div>
-    </section>
+    .FooterToggle {
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+      z-index: 10;
+      min-width: 145px;
+      box-sizing: border-box;
 
-    <section>
-      <h3 class="H3Titles">Fast Sketches:</h3>
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 8px;
+      padding: 6px 12px;
 
-      <div>
-        <img class="artwork" src="./images/FastSketch/FastSketches1.png" alt="Fast sketch artwork 1">
-      </div>
-    </section>
+      background: rgba(15, 15, 15, 0.85);
+      color: white;
 
-    <section>
-      <h3 class="H3Titles">Other Artwork:</h3>
-      
-      <div>
-        <img class="artwork" src="./images/OtherArtwork/OtherWork1.png" alt="Other artwork 1">
-      </div>
-    </section>
+      font-family: "Fredoka", sans-serif;
+      font-weight: 700;
 
-    <section class="Footer">
-      <h5 class="PTitles">Thank you for exploring my portfolio!</h5>
-      <h5 class="H5Titles">Website Designed By Fizogon</h5>
+      cursor: pointer;
+      transform-origin: bottom right;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
 
-      <ul class="ContactInfo">
-        <li>Email: fizogonbusiness@gmail.com</li>
-        <li>Discord: @fizogon_</li>
-      </ul>
-      <h5 class="H5Titles" style="color: rgb(190, 0, 0);">⚠️ All Artwork Is Protected by UK Copyright Law. Please Do Not Use or Redistribute Without Permission. ⚠️</h5>
-    </section>
+    .FooterToggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px) scale(1.05);
+    }
 
-  </body>
+    .CopyrightNotice {
+      color: rgb(190, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <h1 class="H1Titles">Scrufflx Portfolio!</h1>
+    <p class="PTitles">Most Of My Art Work Will Be Listed Here!</p>
+  </section>
+
+  <section>
+    <h3 class="H3Titles">Profile Pictures:</h3>
+
+    <div>
+      <img class="artwork" src="./images/ProfilePictures/ProfilePicture1.png" alt="Profile picture artwork 1">
+      <img class="artwork" src="./images/ProfilePictures/ProfilePicture2.png" alt="Profile picture artwork 2">
+      <img class="artwork" src="./images/ProfilePictures/ProfilePicture3.png" alt="Profile picture artwork 3">
+      <img class="artwork" src="./images/ProfilePictures/ProfilePicture4.png" alt="Profile picture artwork 4">
+    </div>
+  </section>
+
+  <section>
+    <h3 class="H3Titles">Fast Sketches:</h3>
+
+    <div>
+      <img class="artwork" src="./images/FastSketch/FastSketches1.png" alt="Fast sketch artwork 1">
+    </div>
+  </section>
+
+  <section>
+    <h3 class="H3Titles">Other Artwork:</h3>
+
+    <div>
+      <img class="artwork" src="./images/OtherArtwork/OtherWork1.png" alt="Other artwork 1">
+    </div>
+  </section>
+
+  <button class="FooterToggle" id="footerToggle" type="button" aria-controls="Footer" aria-expanded="true">
+    Hide Information
+  </button>
+
+  <section class="Footer" id="Footer">
+    <h5 class="PTitles">Thank you for exploring my portfolio!</h5>
+
+    <h5 class="H5Titles">Website Designed By Fizogon</h5>
+
+    <ul class="ContactInfo">
+      <li>Email: fizogonbusiness@gmail.com</li>
+      <li>Discord: @fizogon_</li>
+    </ul>
+
+    <h5 class="H5Titles CopyrightNotice">
+      ⚠️ All Artwork Is Protected by UK Copyright Law. Please Do Not Use or Redistribute Without Permission. ⚠️
+    </h5>
+  </section>
+
+  <script>
+    const footer = document.getElementById("Footer");
+    const footerToggle = document.getElementById("footerToggle");
+
+    footerToggle.addEventListener("click", () => {
+      const isHidden = footer.classList.toggle("Hidden");
+      footerToggle.textContent = isHidden ? "Show Information" : "Hide Information";
+      footerToggle.setAttribute("aria-expanded", String(!isHidden));
+    });
+  </script>
+
+
+</body>
 </html>
