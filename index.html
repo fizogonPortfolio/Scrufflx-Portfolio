@@ -26,7 +26,7 @@
         z-index: -1;
       }
 
-      .H1Titles, .H3Titles, .PTitles {
+      .H5Titles, .H1Titles, .H3Titles, .PTitles {
         color: white;
         font-weight: 700;
         text-shadow: 1px 1px 0 black;
@@ -49,20 +49,64 @@
         padding: 5px;
         background: #a8a2a2;
       }
+
+      .Footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 7px 0;
+        background: rgba(15, 15, 15, 0.85);
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+        text-align: center;
+      }
+      .Footer h5 {
+        margin: 3px 0;
+      }
+
+      .ContactInfo {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        list-style-type: none;
+        padding: 0;
+        margin: 3px 0 0;
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        text-shadow: 1px 1px 0 black;
+      } 
     </style>
   </head>
 
   <body>
-    <h1 class="H1Titles">Scrufflx Portfolio!</h1>
-    <p class="PTitles">Most Of My Art Work Will Be Listed Here!</p>
 
-    <h3 class="H3Titles">Profile Pictures:</h3>
+    <section>
+      <h1 class="H1Titles">Scrufflx Portfolio!</h1>
+      <p class="PTitles">Most Of My Art Work Will Be Listed Here!</p>
+    </section>
 
-    <div>
-      <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture1.png" alt="My artwork">
-      <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture2.png" alt="My artwork">
-      <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture3.png" alt="My artwork">
-      <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture4.png" alt="My artwork">
-    </div>
+    <section>
+      <h3 class="H3Titles">Profile Pictures:</h3>
+
+      <div>
+        <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture1.png" alt="Profile picture artwork 1">
+        <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture2.png" alt="Profile picture artwork 2">
+        <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture3.png" alt="Profile picture artwork 3">
+        <img class="artwork_ProfilePictures" src="./images/ProfilePictures/ProfilePicture4.png" alt="Profile picture artwork 4">
+      </div>
+    </section>
+
+    <section class="Footer">
+      <h5 class="PTitles">Thank you for exploring my portfolio!</h5>
+      <h5 class="H5Titles">Website Designed By Fizogon</h5>
+
+      <ul class="ContactInfo">
+        <li>Email: fizogonbusiness@gmail.com</li>
+        <li>Discord: @fizogon_</li>
+      </ul>
+    </section>
+
   </body>
 </html>
